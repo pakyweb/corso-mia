@@ -1,0 +1,83 @@
+/* style.css */
+nav {
+    background-color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    padding: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    padding: 2px;
+    margin: 0 10px;
+    position: relative; /* Aggiungiamo position: relative al li */
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Colore di sfondo scuro */
+    z-index: -1; /* Posiziona lo sfondo dietro il testo */
+    border-radius: inherit; /* Ereditiamo il raggio degli angoli dal link */
+    transform: scaleY(0); /* Inizialmente comprimiamo lo sfondo verticalmente */
+    transition: transform 0.3s ease; /* Aggiungiamo una transizione per lo scaling */
+  }
+  
+  .nav-links a:hover::before {
+    width: 100%;
+    padding: 2px;
+    height: 100%;
+    border-radius: 5px;
+    transform: scaleY(1); /* Al passaggio del mouse, estendiamo lo sfondo */
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  /* Effetto 3D (adattare a seconda delle preferenze) */
+  .nav-links li {
+    perspective: 1000px;
+  }
+  
+  .nav-links a {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .nav-links a:hover {
+    transform: rotateY(10deg);
+  }
