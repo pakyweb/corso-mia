@@ -80,4 +80,6 @@ nav {
   
   .nav-links a:hover {
     transform: rotateY(10deg);
+    padding: 10px 5px;
+
   }
